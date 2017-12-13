@@ -1,6 +1,7 @@
 ---
 title: Terminal命令小结
 date: 2017-11-22 13:56:34
+top: true
 tags: 
 	- Terminal Command Line
 ---

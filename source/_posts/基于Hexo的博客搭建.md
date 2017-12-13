@@ -138,7 +138,7 @@ $ hexo new "This is a new article"
 
 `Hexo`会自动生成`.md`文件在`~/BlogName/source/_posts`目录下，可以使用各种`Markdown`编辑器进行博客的书写了。
 
-在每篇文章里面可以配置`header`，来标记类别、时间、标签等：
+在每篇文章里面可以配置`Front-matter`，来标记类别、时间、标签等：
 
 ```
 ---
@@ -218,7 +218,7 @@ menu_icons:
   enable: true
 ```
 
-`menu`是主要需要配置的，这个就是你的博客展现出来的分类，`/`表示根目录，`||`后面接的是`icon name`，如我的博客有一个随笔分类，我是利用标签`tags`来配置的，`/tags/随笔`表示了点击的链接`随笔`标签。在随笔文章中的`header`里面配置：
+`menu`是主要需要配置的，这个就是你的博客展现出来的分类，`/`表示根目录，`||`后面接的是`icon name`，如我的博客有一个随笔分类，我是利用标签`tags`来配置的，`/tags/随笔`表示了点击的链接`随笔`标签。在随笔文章中的`Front-matter`里面配置：
 
 ```
 tags: 
@@ -270,6 +270,17 @@ menu:
 
 ### 其他配置
 
+#### Hexo置顶问题
+
+参考[这篇文章](http://www.netcan666.com/2015/11/22/解决Hexo置顶问题/)，安装插件：
+
+```
+$ sudo npm uninstall hexo-generator-index --save
+$ npm install hexo-generator-index-pin-top --save
+```
+
+之后再需要置顶文章的`Front-matter`中加上`top: true`属性即可，同时添加多个置顶按照时间顺序排序。
+
 #### NexT自定义首页展示文章内容
 
 之前遇到的一个需求，例如我的博客中存在`随笔`分类，而我希望我的首页只展现我的技术类文章。[这篇文章](http://forwardkth.github.io/2016/05/08/next-theme-post-visibility/)解决了这个问题，具体来说就是修改`layout`文件：
@@ -307,7 +318,7 @@ $ open index.swig
 {% endblock %}
 ```
 
-直接复制即可，主要就是添加了一个判断：如果文章中的`header`包含一个`visible`属性切属性为`hide`，那么首页就不进行展示。之后只要在`随笔`类的文章中添加属性即可：
+直接复制即可，主要就是添加了一个判断：如果文章中的`Front-matter`包含一个`visible`属性切属性为`hide`，那么首页就不进行展示。之后只要在`随笔`类的文章中添加属性即可：
 
 ```
 ---
