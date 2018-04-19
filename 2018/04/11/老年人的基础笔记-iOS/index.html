@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="note," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Leo" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="太久没有动笔了，最近面临着换工作，需要复习一下早已忘记的基础知识了，考虑到老年人只有1周的记忆，所以2018年第一篇博客，献给我自己，方便以后随时查看补充。">
+<meta name="keywords" content="note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="老年人的基础笔记-iOS">
+<meta property="og:url" content="http://xuhaoranleo.top/2018/04/11/老年人的基础笔记-iOS/index.html">
+<meta property="og:site_name" content="Leo">
+<meta property="og:description" content="太久没有动笔了，最近面临着换工作，需要复习一下早已忘记的基础知识了，考虑到老年人只有1周的记忆，所以2018年第一篇博客，献给我自己，方便以后随时查看补充。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/mvc1.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/mvc2.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/mvp.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/mvvm.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/instance、class、metaclass1.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/instance、class、metaclass2.jpg">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/runloop1.png">
+<meta property="og:image" content="http://xuhaoranleo.top/assets/ArticleImg/runloop2.png">
+<meta property="og:updated_time" content="2018-04-18T08:45:26.127Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="老年人的基础笔记-iOS">
+<meta name="twitter:description" content="太久没有动笔了，最近面临着换工作，需要复习一下早已忘记的基础知识了，考虑到老年人只有1周的记忆，所以2018年第一篇博客，献给我自己，方便以后随时查看补充。">
+<meta name="twitter:image" content="http://xuhaoranleo.top/assets/ArticleImg/mvc1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xuhaoranleo.top/2018/04/11/老年人的基础笔记-iOS/"/>
+
+
+
+
+
+  <title>老年人的基础笔记-iOS | Leo</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?caf459901d35e0889d39995f6f4576df";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Leo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">侠心交友，素心做人。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jottings">
+          <a href="/tags/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            jottings
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xuhaoranleo.top/2018/04/11/老年人的基础笔记-iOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="许昊然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/blogImg/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">老年人的基础笔记-iOS</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T16:21:34+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>太久没有动笔了，最近面临着换工作，需要复习一下早已忘记的基础知识了，考虑到老年人只有1周的记忆，所以2018年第一篇博客，献给我自己，方便以后随时查看补充。</em></p>
+<a id="more"></a>
+<h2 id="架构模式"><a href="#架构模式" class="headerlink" title="架构模式"></a>架构模式</h2><h3 id="什么才是好的架构"><a href="#什么才是好的架构" class="headerlink" title="什么才是好的架构"></a>什么才是好的架构</h3><ul>
+<li>各部分职责清晰、单一、具体</li>
+<li>具有可测性，让单元测试尽可能覆盖</li>
+<li>使用成本低，维护成本也低</li>
+</ul>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h3><p>两张经典的图，第一张为苹果期望中的MVC，第二张为实际项目中的MVC：</p>
+<p><img src="/assets/ArticleImg/mvc1.png" alt="苹果期望的MVC"></p>
+<p><img src="/assets/ArticleImg/mvc2.png" alt="现实中的MVC"></p>
+<p>Cocoa中的MVC可以称作重控制器模式，期望中View与Model通过Controller进行间接联系，从而达到解耦，但是实际中View与Controller耦合非常严重，Controller异常庞大，可测试性与Debug效率很低。但是相比其他模式，代码总量偏少，门槛低，便于简单的项目进行快速开发。</p>
+<h3 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h3><p>这是一张关于MVP的经典图：</p>
+<p><img src="/assets/ArticleImg/mvp.png" alt="mvp"></p>
+<p>与MVC看似相似，实际上有很大不同，View层实际上是View也是Controller，Presenter层用来负责将Model与View/Controller进行组合，并且不会存在具体的布局，只有数据组装。一般来讲，逻辑部分的处理都在Model与Presenter层，这就造就了一个轻量级的View层，便于进行单元测试，虽然代码量多了很多很多，但是设计逻辑并不会比MVC复杂多少。</p>
+<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>还是先放经典图：</p>
+<p><img src="/assets/ArticleImg/mvvm.png" alt="mvvm"></p>
+<p>与MVP的结构看起来很像，Presenter换成了ViewModel而已。其实，ViewModel并不是直接把二者的数据组合到一起，View层负责绑定ViewModel并传递所有的事件消息，ViewModel响应这些消息进而更新数据并进行页面展示。简单来讲，ViewModel连接View与Model，其中一者发送消息，另一方及时改变。</p>
+<p>MVVM的绑定与消息机制可以通过KVO或者消息通知等方式实现，或者可以用到更强大的ReactiveCocoa这种响应式框架，但同时也将面临着复杂的调试环境。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>一种架构并不是一个项目中唯一存在，而是根据项目规模、业务场景以及各种因素决定的，MV(X)架构模式都是彼此兼容，可以任意组合和转换的。</p>
+<h2 id="类与实例"><a href="#类与实例" class="headerlink" title="类与实例"></a>类与实例</h2><h3 id="类对象"><a href="#类对象" class="headerlink" title="类对象"></a>类对象</h3><p>在<code>objc.h</code>中可以看到类是由<code>Class</code>表示的，实质上是一个指向<code>objc_class</code>结构体的指针：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// An opaque type that represents an Objective-C class.</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">objc_class</span> *<span class="title">Class</span>;</span></span><br></pre></td></tr></table></figure>
+<p>而在<code>runtime.h</code>中的 <code>objc_class</code>结构体的定义：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">objc_class</span> &#123;</span></span><br><span class="line">    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> !__OBJC2__</span></span><br><span class="line">    Class _Nullable super_class                              OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> * _Nonnull name                               OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> version                                             OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> info                                                OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> instance_size                                       OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">objc_ivar_list</span> * _<span class="title">Nullable</span> <span class="title">ivars</span>                  <span class="title">OBJC2_UNAVAILABLE</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">objc_method_list</span> * _<span class="title">Nullable</span> * _<span class="title">Nullable</span> <span class="title">methodLists</span>                    <span class="title">OBJC2_UNAVAILABLE</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">objc_cache</span> * _<span class="title">Nonnull</span> <span class="title">cache</span>                       <span class="title">OBJC2_UNAVAILABLE</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">objc_protocol_list</span> * _<span class="title">Nullable</span> <span class="title">protocols</span>          <span class="title">OBJC2_UNAVAILABLE</span>;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">&#125; OBJC2_UNAVAILABLE;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>isa指针指向的是也是一个类，类对象的isa指向的是这个类的所属类，也就是元类(metaclass)。日常使用的类方法就是保存在元类的类方法列表中，使用时通过isa去元类中的类方法列表寻找对应的函数指针。</li>
+<li>ivars成员变量列表，保存着这个类下面的所有实例变量的地址指针。</li>
+<li>info标识符，其中<code>CLS_CLASS(0x1)</code>表示该类为普通类，而<code>CLS_META(0x2)</code>表示该类为元类，还有其他将近20个标识，具体可以查看<code>runtime.h</code>源码。</li>
+<li>methodLists方法列表，根据info标识符，普通类保存的就是实例方法，元类保存的就是类方法。</li>
+<li>cache缓存方法列表，在调用方法的时候，系统会先遍历缓存中是否使用过该方法，没有的话再去方法列表调用。</li>
+</ul>
+<h3 id="实例对象"><a href="#实例对象" class="headerlink" title="实例对象"></a>实例对象</h3><p>对类对象使用<code>new/alloc</code>操作后会创建该类的实例对象，本质使用<code>class_createInstance</code>方法创建一个指向<code>objc_object</code>结构体的指针，在<code>objc.h</code>中定义为：</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/// Represents an<span class="built_in"> instance </span>of a class.</span><br><span class="line">struct objc_object &#123;</span><br><span class="line">    Class _Nonnull isa  OBJC_ISA_AVAI<span class="class">LABILITY;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>每个实例的类型都是它的类对象，而<code>id</code>也是一个实例对象的类型，这个类型可以转换成任何一种实例对象，在<code>objc.h</code>中的定义：</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/// A pointer to an<span class="built_in"> instance </span>of a class.</span><br><span class="line">typedef struct objc_object *id;</span><br></pre></td></tr></table></figure>
+<h3 id="元类对象"><a href="#元类对象" class="headerlink" title="元类对象"></a>元类对象</h3><p>元类是类对象的类，类对象的isa指针指向的就是元类，它的isa指针指向的是它父类的地址，其中存储着类对象的类方法列表。<code>runtime.h</code>中提供了一些元类的方法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">OBJC_EXPORT</span> <span class="selector-tag">Class</span> _<span class="selector-tag">Nullable</span></span><br><span class="line"><span class="selector-tag">objc_getMetaClass</span>(<span class="selector-tag">const</span> <span class="selector-tag">char</span> * _<span class="selector-tag">Nonnull</span> <span class="selector-tag">name</span>)</span><br><span class="line">    <span class="selector-tag">OBJC_AVAILABLE</span>(10<span class="selector-class">.0</span>, 2<span class="selector-class">.0</span>, 9<span class="selector-class">.0</span>, 1<span class="selector-class">.0</span>, 2<span class="selector-class">.0</span>);</span><br><span class="line"><span class="selector-tag">OBJC_EXPORT</span> <span class="selector-tag">BOOL</span></span><br><span class="line"><span class="selector-tag">class_isMetaClass</span>(<span class="selector-tag">Class</span> _<span class="selector-tag">Nullable</span> <span class="selector-tag">cls</span>) </span><br><span class="line">    <span class="selector-tag">OBJC_AVAILABLE</span>(10<span class="selector-class">.5</span>, 2<span class="selector-class">.0</span>, 9<span class="selector-class">.0</span>, 1<span class="selector-class">.0</span>, 2<span class="selector-class">.0</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="实例、类、元类的关系"><a href="#实例、类、元类的关系" class="headerlink" title="实例、类、元类的关系"></a>实例、类、元类的关系</h3><p>从网上找的很经典的两张图：</p>
+<p><img src="/assets/ArticleImg/instance、class、metaclass1.png" alt="instance、class、metaclass1"></p>
+<p><img src="/assets/ArticleImg/instance、class、metaclass2.jpg" alt="instance、class、metaclass2"></p>
+<p>通过这两张图能很明显地看出三者之间的横向、纵向以及内部的关系，不再赘述。</p>
+<h2 id="KVC与KVO"><a href="#KVC与KVO" class="headerlink" title="KVC与KVO"></a>KVC与KVO</h2><h3 id="KVC"><a href="#KVC" class="headerlink" title="KVC"></a>KVC</h3><p>键值编码，使用<code>valueForKey:</code>来获取值，使用<code>setValue:forKey:</code>来赋值，利用字符串作为Key去查找和修改相应的Value，流程大致如下：</p>
+<ul>
+<li>在对象中查找<code>set</code>方法，如果有，就给这个对象赋值。</li>
+<li>如果没有<code>set</code>方法，则寻找<code>_key</code>成员属性，如果有就赋值。</li>
+<li>如果没有<code>_key</code>属性，则去寻找<code>key</code>属性，如果有就赋值。</li>
+<li>以上都不成立，报错。</li>
+</ul>
+<h3 id="KVO"><a href="#KVO" class="headerlink" title="KVO"></a>KVO</h3><p>键值观察，日常使用三个个方法：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加观察者</span></span><br><span class="line">- (<span class="keyword">void</span>)addObserver:(<span class="built_in">NSObject</span> *)observer forKeyPath:(<span class="built_in">NSString</span> *)keyPath options:(<span class="built_in">NSKeyValueObservingOptions</span>)options context:(<span class="keyword">nullable</span> <span class="keyword">void</span> *)context;</span><br><span class="line"><span class="comment">// 移除观察者</span></span><br><span class="line">- (<span class="keyword">void</span>)removeObserver:(<span class="built_in">NSObject</span> *)observer forKeyPath:(<span class="built_in">NSString</span> *)keyPath;</span><br><span class="line"><span class="comment">// 代理回调</span></span><br><span class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">nullable</span> <span class="keyword">id</span>)object change:(<span class="keyword">nullable</span> <span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSKeyValueChangeKey</span>, <span class="keyword">id</span>&gt; *)change context:(<span class="keyword">nullable</span> <span class="keyword">void</span> *)context;</span><br></pre></td></tr></table></figure>
+<p>KVO是基于<code>runtime</code>机制实现的，内部原理如下：</p>
+<ul>
+<li>当某个类<code>ClassA</code>的属性被观察时，系统会动态地创建一个派生类<code>NSKVONotifying_ClassA</code>继承于它。</li>
+<li>在派生类中重写被观察属性的<code>set</code>方法，<code>NSObject(NSKeyValueObserverNotification)</code>的两个方法帮助完成了这整个的过程：</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)<span class="string">setSome:</span>(id)aSome &#123;</span><br><span class="line">  [self <span class="string">willChangeValueForKey:</span>@<span class="string">"some"</span>];</span><br><span class="line">  [<span class="keyword">super</span> <span class="string">setValue:</span>aSome <span class="string">forKey:</span>@<span class="string">"some"</span>];</span><br><span class="line">  [self <span class="string">didChangeValueForKey:</span>@<span class="string">"some"</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当被观察时，系统将<code>ClassA</code>的isa指针指向<code>NSKVONotifying_ClassA</code>，从而被观察属性变化时，调用的是重写后的<code>set</code>方法。</li>
+<li>在被观察者值变化之前和之后，通过代理会掉通知观察者。</li>
+</ul>
+<h2 id="自动释放池"><a href="#自动释放池" class="headerlink" title="自动释放池"></a>自动释放池</h2><p>苹果文档上说明，不论在MRC还是ARC模式下，都应该用<code>@autoreleasepool {}</code>这个block来创建使用自动释放池。强调一下，<code>autoreleasepool</code>在ARC下依然有其重要作用！</p>
+<p>在工程<code>main.m</code>中，系统为我们在程序的入口处就使用了一个<code>autoreleasepool</code>来包裹整个程序，每个程序中至少都要有一个<code>autoreleasepool</code>。</p>
+<p>在MRC的环境下，自动释放池的整个过程大致为：</p>
+<ul>
+<li>系统每个线程中存在一个<code>NSAutoreleasePool</code>的栈，当新的<code>autoreleasepool</code>创建时入栈，被销毁时出栈。</li>
+</ul>
+<ul>
+<li><code>[Object autorelease]</code>表示将对象放入一个池中，会有很多对象进入<code>autoreleasepool</code>。</li>
+<li>当<code>autoreleasepool</code>销毁时，池子出栈，每个池中的对象执行<code>[Object release]</code>。</li>
+</ul>
+<h3 id="何时使用autoreleasepool"><a href="#何时使用autoreleasepool" class="headerlink" title="何时使用autoreleasepool"></a>何时使用<code>autoreleasepool</code></h3><p>苹果文档上是这么说的：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">If</span> you are writing a program that is <span class="keyword">not</span> based on a UI framework, such as a command-line tool.</span><br><span class="line">如果你写的项目不是基于UI framework，例如一个命令行工具。</span><br><span class="line"></span><br><span class="line"><span class="keyword">If</span> you write a loop that creates many temporary objects.</span><br><span class="line">You may use an autorelease<span class="built_in"> pool </span>block inside the loop <span class="keyword">to</span> dispose of those objects before the next iteration. Using an autorelease<span class="built_in"> pool </span>block <span class="keyword">in</span> the loop helps <span class="keyword">to</span> reduce the maximum memory footprint of the application.</span><br><span class="line">如果你写一个包含很多临时对象的循环，你可以在循环内部使用一个自动释放池，在下一次循环前来管理这些对象。这样使用可以帮助减少app的峰值内存。</span><br><span class="line"></span><br><span class="line"><span class="keyword">If</span> you spawn a secondary thread.</span><br><span class="line">You must create your own autorelease<span class="built_in"> pool </span>block as soon as the thread begins executing; otherwise, your application will leak objects.</span><br><span class="line">如果你创建一个辅助线程，那么当线程一开始执行时，必须创建一个自动释放池，否则你的app将会出现内存泄漏。</span><br></pre></td></tr></table></figure>
+<p>对于iOS开发来说，不论在MRC还是ARC下，都可以用到的场景：</p>
+<ul>
+<li>大型的循环可以在内部使用<code>autoreleasepool</code>优化循环的资源消耗。</li>
+<li>使用常驻的辅助线程（类似于AFNetworking线程）时必须使用<code>autoreleasepool</code>。</li>
+</ul>
+<p><code>SDWebImage</code>中对图片的缓存用到了<code>autoreleasepool</code>来优化资源消耗：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dispatch_async(self.ioQueue, </span>^&#123;</span><br><span class="line">	if (operation.isCancelled) &#123;</span><br><span class="line">		return<span class="comment">;</span></span><br><span class="line">	&#125;</span><br><span class="line">	@autoreleasepool &#123;</span><br><span class="line">		UIImage *<span class="keyword">diskImage </span>= [self <span class="keyword">diskImageForKey:key];</span></span><br><span class="line"><span class="keyword">	</span>	if (<span class="keyword">diskImage </span>&amp;&amp; self.<span class="keyword">shouldCacheImagesInMemory) </span>&#123;</span><br><span class="line">			NSUInteger cost = SDCacheCostForImage(<span class="keyword">diskImage);</span></span><br><span class="line"><span class="keyword">	</span>		[self.memCache setObject:<span class="keyword">diskImage </span>forKey:key cost:cost]<span class="comment">;</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">dispatch_async(dispatch_get_main_queue(), </span>^&#123;</span><br><span class="line">			doneBlock(<span class="keyword">diskImage, </span>SDImageCacheTypeDisk)<span class="comment">;</span></span><br><span class="line">		&#125;)<span class="comment">;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h2 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h2><p><code>RunLoop</code>是一个管理待处理事件和消息的对象，提供一个入口函数来执行事件循环的逻辑，是iOS消息机制的处理模式。每个线程都有自己的<code>RunLoop</code>来保证随时处理事件而不退出。</p>
+<p>iOS系统中提供了两个<code>RunLoop</code>对象，一个是<code>NSRunLoop</code>，另一个是<code>CFRunLoopRef</code>。前者是基于后者的封装，提供了面向对象的API，但是这些API并未线程安全。而后者提供的是基于<code>CoreFoundation</code>框架的纯C函数API，这些API都是线程安全的。</p>
+<h3 id="RunLoop与线程"><a href="#RunLoop与线程" class="headerlink" title="RunLoop与线程"></a>RunLoop与线程</h3><p><code>CFRunLoop</code>是基于<code>pthread</code>来管理的，由于苹果不允许直接创建<code>RunLoop</code>，所以只能通过两个函数来获取：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CF_EXPORT</span> <span class="built_in">CFRunLoopRef</span> <span class="built_in">CFRunLoopGetCurrent</span>(<span class="keyword">void</span>);</span><br><span class="line"><span class="built_in">CF_EXPORT</span> <span class="built_in">CFRunLoopRef</span> <span class="built_in">CFRunLoopGetMain</span>(<span class="keyword">void</span>);</span><br></pre></td></tr></table></figure>
+<p><code>RunLoop</code>与线程之间是一一对应的，其关系保存在一个全局的<code>Dictionary</code>中。线程创建后，如果不主动获取，那么一直不会创建自己的<code>RunLoop</code>，而线程结束时，<code>RunLoop</code>也同时销毁。除了主线程以外，只能在当前线程中才能获取其<code>RunLoop</code>。</p>
+<h3 id="RunLoop的API"><a href="#RunLoop的API" class="headerlink" title="RunLoop的API"></a>RunLoop的API</h3><p>在<code>CFRunLoop.h</code>类中可以看到<code>RunLoop</code>大致的结构：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">CFStringRef</span> <span class="built_in">CFRunLoopMode</span> <span class="built_in">CF_EXTENSIBLE_STRING_ENUM</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CF_BRIDGED_MUTABLE_TYPE</span>(<span class="keyword">id</span>) __CFRunLoop * <span class="built_in">CFRunLoopRef</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CF_BRIDGED_MUTABLE_TYPE</span>(<span class="keyword">id</span>) __CFRunLoopSource * <span class="built_in">CFRunLoopSourceRef</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CF_BRIDGED_MUTABLE_TYPE</span>(<span class="keyword">id</span>) __CFRunLoopObserver * <span class="built_in">CFRunLoopObserverRef</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="built_in">CF_BRIDGED_MUTABLE_TYPE</span>(<span class="built_in">NSTimer</span>) __CFRunLoopTimer * <span class="built_in">CFRunLoopTimerRef</span>;</span><br></pre></td></tr></table></figure>
+<p>在这张图中能看出它们之间的大致关系：</p>
+<p><img src="/assets/ArticleImg/runloop1.png" alt="runloop1"></p>
+<p>一个<code>RunLoop</code>中包含若干个<code>Mode</code>，每个<code>Model</code>中包含若干个<code>Source/Timer/Observer</code>。每次调用<code>RunLoop</code>时只能指定一个<code>Mode</code>，如果需要切换<code>Mode</code>，只能退出重新进入，指定一个新的。</p>
+<ul>
+<li>CFRunLoopRef中可以有多个<code>mode</code>。一个<code>mode</code>可以将自己的<code>_name</code>标记为<code>Common</code>属性来将其加入到<code>_commonModes</code>，每当 <code>RunLoop</code> 的内容发生变化时，都会自动将<code>_commonModeItems</code>里的 <code>Source/Observer/Timer</code>同步到具有<code>Common</code>标记的所有<code>mode</code>里。</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> __CFRunLoop &#123;</span><br><span class="line">    <span class="built_in">CFMutableSetRef</span> _commonModes;     <span class="comment">// Set</span></span><br><span class="line">    <span class="built_in">CFMutableSetRef</span> _commonModeItems; <span class="comment">// Set&lt;Source/Observer/Timer&gt;</span></span><br><span class="line">    <span class="built_in">CFRunLoopModeRef</span> _currentMode;    <span class="comment">// Current Runloop Mode</span></span><br><span class="line">    <span class="built_in">CFMutableSetRef</span> _modes;           <span class="comment">// Set</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> __CFRunLoopMode &#123;</span><br><span class="line">    <span class="built_in">CFStringRef</span> _name;            <span class="comment">// Mode Name, 例如 @"kCFRunLoopDefaultMode"</span></span><br><span class="line">    <span class="built_in">CFMutableSetRef</span> _sources0;    <span class="comment">// Set</span></span><br><span class="line">    <span class="built_in">CFMutableSetRef</span> _sources1;    <span class="comment">// Set</span></span><br><span class="line">    <span class="built_in">CFMutableArrayRef</span> _observers; <span class="comment">// Array</span></span><br><span class="line">    <span class="built_in">CFMutableArrayRef</span> _timers;    <span class="comment">// Array</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>CFRunLoopSourceRef是事件源，分为<code>source0</code>和<code>source1</code>两种类型。其中<code>source0</code>不能主动触发事件，而<code>source1</code>中有一个<code>mach_port</code>，可以主动唤醒<code>RunLoop</code>的线程。</li>
+<li>CFRunLoopObserverRef是观察者，每个<code>Observer</code>都包含了一个回调，当观测的状态发生变化时回调这个变化，具体变化：</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Run Loop Observer Activities */</span></span><br><span class="line">typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) &#123;</span><br><span class="line">    kCFRunLoopEntry = (<span class="number">1</span>UL &lt;&lt; <span class="number">0</span>),</span><br><span class="line">    kCFRunLoopBeforeTimers = (<span class="number">1</span>UL &lt;&lt; <span class="number">1</span>),</span><br><span class="line">    kCFRunLoopBeforeSources = (<span class="number">1</span>UL &lt;&lt; <span class="number">2</span>),</span><br><span class="line">    kCFRunLoopBeforeWaiting = (<span class="number">1</span>UL &lt;&lt; <span class="number">5</span>),</span><br><span class="line">    kCFRunLoopAfterWaiting = (<span class="number">1</span>UL &lt;&lt; <span class="number">6</span>),</span><br><span class="line">    kCFRunLoopExit = (<span class="number">1</span>UL &lt;&lt; <span class="number">7</span>),</span><br><span class="line">    kCFRunLoopAllActivities = <span class="number">0x0FFFFFFF</span>U</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>CFRunLoopTimerRef是触发器，包含了一个时间长度和一个回调，当其加入<code>RunLoop</code>中时会注册对应的时间点，到时<code>RunLoop</code>会被唤醒执行回调。</li>
+</ul>
+<p>苹果公开提供了三个<code>mode</code>：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// CoreFoundation</span></span><br><span class="line"><span class="built_in">CF_EXPORT</span> <span class="keyword">const</span> <span class="built_in">CFRunLoopMode</span> kCFRunLoopDefaultMode;</span><br><span class="line"><span class="built_in">CF_EXPORT</span> <span class="keyword">const</span> <span class="built_in">CFRunLoopMode</span> kCFRunLoopCommonModes;</span><br><span class="line"><span class="comment">/// Foundation</span></span><br><span class="line">FOUNDATION_EXPORT <span class="built_in">NSRunLoopMode</span> <span class="keyword">const</span> <span class="built_in">NSDefaultRunLoopMode</span>;</span><br><span class="line">FOUNDATION_EXPORT <span class="built_in">NSRunLoopMode</span> <span class="keyword">const</span> <span class="built_in">NSRunLoopCommonModes</span> API_AVAILABLE(macos(<span class="number">10.5</span>), ios(<span class="number">2.0</span>), watchos(<span class="number">2.0</span>), tvos(<span class="number">9.0</span>));</span><br><span class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSRunLoopMode</span> <span class="keyword">const</span> <span class="built_in">UITrackingRunLoopMode</span>;</span><br></pre></td></tr></table></figure>
+<p><code>CommonModes</code>是一个集合，<code>DefaultMode</code>和<code>Tranking Mode</code>都被标记了<code>Common</code>属性。日常使用<code>NSTimer</code>时为了防止滑动失效，需要将<code>timer</code>加入到<code>RunLoop</code>并设置模式为<code>NSRunLoopCommonModes</code>。</p>
+<h3 id="RunLoop内部逻辑"><a href="#RunLoop内部逻辑" class="headerlink" title="RunLoop内部逻辑"></a>RunLoop内部逻辑</h3><p><img src="/assets/ArticleImg/runloop2.png" alt="runloop2"></p>
+<p><code>RunLoop</code>本身其实就是一个<code>do-while</code>的循环，当调用的时候会一直停留在这个循环里，直到超时或者手动停止。其核心是基于<code>mach_port</code>的，<code>source0</code>是在<code>RunLoop</code>开始的时候触发的，当它的回调处理结束之后，如果存在<code>source1</code>则进去等待状态，调用<code>mach_msg()</code>方法等待接收通过<code>mach_port</code>发来的消息，如果等待超时或者接收到消息则处理并执行下一条。</p>
+<h4 id="与GCD"><a href="#与GCD" class="headerlink" title="与GCD"></a>与GCD</h4><p>在<code>RunLoop</code>中大量用到了GCD，而GCD中也有用到<code>RunLoop</code>的地方。<code>RunLoop</code>的超时时间使用的是GCD的<code>dispatch_source_t</code>定时器实现的。同时GCD中的<code>dispatch_async()</code>也用到了<code>RunLoop</code>，这个仅仅限于在主线程中的使用<code>dispatch_get_main_queue()</code>。</p>
+<h4 id="与Autoreleasepool"><a href="#与Autoreleasepool" class="headerlink" title="与Autoreleasepool"></a>与Autoreleasepool</h4><p>苹果在App启动后，在主线程的<code>RunLoop</code>中注册了两个<code>CFRunLoopObserver</code>，它们的回调均是<code>_wrapRunLoopWithAutoreleasePoolHandler</code>。</p>
+<p>第一个<code>Observer</code>用来监视Entry事件，它的回调会调用<code>_objc_autoreleasePoolPush()</code>创建自动释放池并入栈，其序列优先级非常非常高，保证其创建的释放池发生在所有回调之前。</p>
+<p>第二个<code>Observer</code>监视BeforeWaiting和Exit事件。当BeforeWaiting时，调用<code>_objc_autoreleasePoolPop()</code>和<code>_objc_autoreleasePoolPush()</code>，释放旧的池出栈并创建新的池入栈等待；当Exit时，直接调用<code>_objc_autoreleasePoolPop()</code>来释放池子。这个序列优先级非常非常低，保证其释放池子的行为发生在所有回调之后。</p>
+<p>在主线程执行的代码，通常写在事件回调、计时器回调内的这些会被<code>RunLoop</code>创建好的释放池围绕着，所以不会出现内存泄漏。而子线程需要手动的调用<code>run()</code>方法来让<code>RunLoop</code>跑起来并创建释放池。</p>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h2 id="计时器相关"><a href="#计时器相关" class="headerlink" title="计时器相关"></a>计时器相关</h2><h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h2 id="事件响应与传递"><a href="#事件响应与传递" class="headerlink" title="事件响应与传递"></a>事件响应与传递</h2><h2 id="图片解压缩"><a href="#图片解压缩" class="headerlink" title="图片解压缩"></a>图片解压缩</h2><h2 id="UITableView优化"><a href="#UITableView优化" class="headerlink" title="UITableView优化"></a>UITableView优化</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/b849c6972216" target="_blank" rel="noopener">iOS 的架构模式</a></p>
+<p><a href="https://www.jianshu.com/p/0ba0b2bac78a" target="_blank" rel="noopener">格物致知iOS类与对象</a></p>
+<p><a href="https://www.jianshu.com/p/829864680648" target="_blank" rel="noopener">探究KVO的底层实现原理</a></p>
+<p><a href="https://www.jianshu.com/p/5559bc15490d" target="_blank" rel="noopener">iOS中autorelease的那些事儿</a></p>
+<p><a href="https://blog.ibireme.com/2015/05/18/runloop/" target="_blank" rel="noopener">深入理解RunLoop</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我喝一杯咖啡？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/assets/blogImg/wechatpay.jpg" alt="许昊然 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/note/" rel="tag"># note</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/10/小小少年/" rel="next" title="小小少年">
+                <i class="fa fa-chevron-left"></i> 小小少年
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/assets/blogImg/avatar.jpg"
+                alt="许昊然" />
+            
+              <p class="site-author-name" itemprop="name">许昊然</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xuhaoranLeo" target="_blank" title="GitHub">
+                    GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:liang_andy@163.com" target="_blank" title="E-Mail">
+                    E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/8f0c4d84e87c" target="_blank" title="简书">
+                    简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/5711479827" target="_blank" title="微博">
+                    微博</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#架构模式"><span class="nav-number">1.</span> <span class="nav-text">架构模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么才是好的架构"><span class="nav-number">1.1.</span> <span class="nav-text">什么才是好的架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC"><span class="nav-number">1.2.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP"><span class="nav-number">1.3.</span> <span class="nav-text">MVP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM"><span class="nav-number">1.4.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类与实例"><span class="nav-number">2.</span> <span class="nav-text">类与实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类对象"><span class="nav-number">2.1.</span> <span class="nav-text">类对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例对象"><span class="nav-number">2.2.</span> <span class="nav-text">实例对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元类对象"><span class="nav-number">2.3.</span> <span class="nav-text">元类对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例、类、元类的关系"><span class="nav-number">2.4.</span> <span class="nav-text">实例、类、元类的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KVC与KVO"><span class="nav-number">3.</span> <span class="nav-text">KVC与KVO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KVC"><span class="nav-number">3.1.</span> <span class="nav-text">KVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KVO"><span class="nav-number">3.2.</span> <span class="nav-text">KVO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动释放池"><span class="nav-number">4.</span> <span class="nav-text">自动释放池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#何时使用autoreleasepool"><span class="nav-number">4.1.</span> <span class="nav-text">何时使用autoreleasepool</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RunLoop"><span class="nav-number">5.</span> <span class="nav-text">RunLoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RunLoop与线程"><span class="nav-number">5.1.</span> <span class="nav-text">RunLoop与线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RunLoop的API"><span class="nav-number">5.2.</span> <span class="nav-text">RunLoop的API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RunLoop内部逻辑"><span class="nav-number">5.3.</span> <span class="nav-text">RunLoop内部逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与GCD"><span class="nav-number">5.3.1.</span> <span class="nav-text">与GCD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与Autoreleasepool"><span class="nav-number">5.3.2.</span> <span class="nav-text">与Autoreleasepool</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">6.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计时器相关"><span class="nav-number">7.</span> <span class="nav-text">计时器相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络协议"><span class="nav-number">8.</span> <span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件响应与传递"><span class="nav-number">9.</span> <span class="nav-text">事件响应与传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片解压缩"><span class="nav-number">10.</span> <span class="nav-text">图片解压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UITableView优化"><span class="nav-number">11.</span> <span class="nav-text">UITableView优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">12.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leo</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

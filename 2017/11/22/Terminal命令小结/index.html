@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Terminal Command Line," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Leo" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="作为迁移博客的第一篇文章，不知道要写些什么内容，最近几个月忙项目忙装修，几乎从未想起博客这件事，近来有种卸磨杀驴的失落感，自知能力决定待遇的道理，所以还是要不断加强自身能力，其最好的方式莫过于分享，博客就是其中优选。 上次迁移博客是从博客园到简书，这次是从简书到github，其实决定因素还是美观度，hexo给我更极客的感觉，虽然自己并不极客。整个搭建、配置主题的过程大概用了两三天时间，这个过程中接">
+<meta name="keywords" content="Terminal Command Line">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Terminal命令小结">
+<meta property="og:url" content="http://xuhaoranleo.top/2017/11/22/Terminal命令小结/index.html">
+<meta property="og:site_name" content="Leo">
+<meta property="og:description" content="作为迁移博客的第一篇文章，不知道要写些什么内容，最近几个月忙项目忙装修，几乎从未想起博客这件事，近来有种卸磨杀驴的失落感，自知能力决定待遇的道理，所以还是要不断加强自身能力，其最好的方式莫过于分享，博客就是其中优选。 上次迁移博客是从博客园到简书，这次是从简书到github，其实决定因素还是美观度，hexo给我更极客的感觉，虽然自己并不极客。整个搭建、配置主题的过程大概用了两三天时间，这个过程中接">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-18T08:45:26.127Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Terminal命令小结">
+<meta name="twitter:description" content="作为迁移博客的第一篇文章，不知道要写些什么内容，最近几个月忙项目忙装修，几乎从未想起博客这件事，近来有种卸磨杀驴的失落感，自知能力决定待遇的道理，所以还是要不断加强自身能力，其最好的方式莫过于分享，博客就是其中优选。 上次迁移博客是从博客园到简书，这次是从简书到github，其实决定因素还是美观度，hexo给我更极客的感觉，虽然自己并不极客。整个搭建、配置主题的过程大概用了两三天时间，这个过程中接">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xuhaoranleo.top/2017/11/22/Terminal命令小结/"/>
+
+
+
+
+
+  <title>Terminal命令小结 | Leo</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?caf459901d35e0889d39995f6f4576df";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Leo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">侠心交友，素心做人。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jottings">
+          <a href="/tags/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            jottings
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xuhaoranleo.top/2017/11/22/Terminal命令小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="许昊然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/blogImg/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Terminal命令小结</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-22T13:56:34+08:00">
+                2017-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>作为迁移博客的第一篇文章，不知道要写些什么内容，最近几个月忙项目忙装修，几乎从未想起博客这件事，近来有种卸磨杀驴的失落感，自知能力决定待遇的道理，所以还是要不断加强自身能力，其最好的方式莫过于分享，博客就是其中优选。</em></p>
+<p><em>上次迁移博客是从博客园到简书，这次是从简书到github，其实决定因素还是美观度，hexo给我更极客的感觉，虽然自己并不极客。整个搭建、配置主题的过程大概用了两三天时间，这个过程中接触到了很多新知识，近期的博客计划也就从其中总结出来。</em></p>
+<a id="more"></a>
+<h2 id="关于Command-Line"><a href="#关于Command-Line" class="headerlink" title="关于Command Line"></a>关于Command Line</h2><p>从入行至今，使用Terminal的次数并不多，现用现查是常态，平时开发中<code>Git</code>也是使用图形界面工具，所以对Terminal非常陌生，直到最近自己搭了一个VPN才真正意识到命令行的便捷，而搭建博客的过程中命令行更是不可缺少的工具。</p>
+<blockquote>
+<p> 你可以整天驾驶汽车而不用知道如何修理它们，但是如果你希望当一个维护员，你就需要知道事情是如何运作的。同样的事情也发生在了 Mac OS X 上；你可以一直使用 Mac 而不用知道如何修理它，但是如果你想对系统做一些维护或解决一些问题，那么你需要知道如何使用 command-line。 </p>
+<p> —— 网摘自<strong>Renfei Song</strong>‘s Blog</p>
+</blockquote>
+<p>Mac上很多功能不提供图形界面，只能通过命令行来实现，例如说<code>ssh</code>，Windows下需要使用<code>XShell</code>之类的软件来操作，而*nix系统直接使用终端命令就可以直接链接：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh username<span class="variable">@hostname</span></span><br></pre></td></tr></table></figure>
+<p>通过Terminal可以访问所有目录，包括<code>Finder</code>隐藏的目录，而<code>Finder</code>的隐藏文件功能也只能通过<code>Terminal</code>开关，当然在系统<code>10.12</code>中可以使用<code>Shift</code>+<code>Command</code>+<code>.</code>来快速开启与关闭：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -<span class="built_in">boolean</span> <span class="literal">true</span> ; killall Finder </span><br><span class="line">$ defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -<span class="built_in">boolean</span> <span class="literal">false</span> ; killall Finder</span><br></pre></td></tr></table></figure>
+<p>Terminal可以做界面图形App能做的绝大多数操作，因为界面图形App背后使用的就是Command Line，例如在你安装<code>Xcode</code>之后，你就可以通过命令行进行编译和打包操作：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> xcodebuild -workspace YourWorkspaceName -scheme YourSchemeName -configuration Debug archive -archivePath YourArchivePath</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> xcodebuild -exportArchive -archivePath YourArchivePath -exportPath YourExportPath -exportOptionsPlist ./ConfigPlistName.plist</span></span><br></pre></td></tr></table></figure>
+<p>虽然学习Command Line需要一个记忆和熟练的过程，但其强大且广泛的功能带给我们的便利快捷要远大于其学习成本，所以说使用Terminal，学会Command Line是一个程序员必备的素质之一。</p>
+<h2 id="关于man命令"><a href="#关于man命令" class="headerlink" title="关于man命令"></a>关于man命令</h2><p>Terminal里面成百上千条命令，每一条命令还有其具体的参数方法，谁也不能全都记住，那么怎么办？推荐学习Command Line的人们最先掌握的命令<code>man</code>。通过<code>man CommandName</code>来获取你想知道的命令的使用指南：</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">man</span> xcodebuild</span><br><span class="line"></span><br><span class="line">NAME</span><br><span class="line">     xcodebuild -- build Xcode projects and workspaces</span><br><span class="line"></span><br><span class="line">SYNOPSIS</span><br><span class="line">     xcodebuild <span class="comment">[-project name.xcodeproj]</span></span><br><span class="line">                <span class="comment">[<span class="comment">[-target targetname]</span> ... | -alltargets]</span></span><br><span class="line">                <span class="comment">[-configuration configurationname]</span></span><br><span class="line">                <span class="comment">[-sdk <span class="comment">[sdkfullpath | sdkname]</span>]</span> <span class="comment">[action ...]</span></span><br><span class="line">                <span class="comment">[buildsetting=value ...]</span> <span class="comment">[-userdefault=value ...]</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>包括命令的名称、参数意义、使用描述等等，足够你理解使用这个命令了，在浏览期间可以通过<code>Space</code>翻页、<code>↑</code>和<code>↓</code>来滚动、输入<code>/ SearchKeyword</code>来搜索，使用<code>Q</code>退出页面。如果你不清楚这个命令的名字，可以使用<code>man -K Keyword</code>来搜索，Terminal会询问你搜索的结果是否是你想要的。</p>
+<h2 id="关于路径与文件命令"><a href="#关于路径与文件命令" class="headerlink" title="关于路径与文件命令"></a>关于路径与文件命令</h2><p>虽然平时使用Finder管理文件已经很方便了，但是某些时候使用Terminal来进行路径和文件的操作也会非常便捷。</p>
+<h3 id="路径命令"><a href="#路径命令" class="headerlink" title="路径命令"></a>路径命令</h3><p>路径分为绝对路径和相对路径。</p>
+<p>绝对路径总是以<code>/</code>开头，例如<code>/Users/xuhaoran/blog</code>。</p>
+<p>相对路径是根据你的Terminal当前的路径位置有关，Terminal默认路径为<code>Home Folder</code>，就是<code>⌘</code>+<code>⇧</code>+<code>H</code>的Folder，相对路径可以使用<code>../</code>来表示上一级路径，使用<code>./</code>表示本级路径，通常可以省略，使用<code>~/</code>则表示你的<code>Home Folder</code>。</p>
+<p>绝对路径的第一个<code>/</code>代表根目录，而<code>/Users/UserName</code>即是<code>HomeFolder</code>。</p>
+<p>如何获取绝对路径？有两个方法：1、打开Terminal后，直接拖拽Folder或File进来；2、使用<code>pwd</code>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">pwd</span></span></span><br><span class="line">/Users/xuhaoran/blog</span><br></pre></td></tr></table></figure>
+<p>跳转到指定路径使用<code>cd</code>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> DirectoryName</span></span><br></pre></td></tr></table></figure>
+<p><code>cd -</code>命令可以后退目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Desktop/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Downloads/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> -</span></span><br><span class="line">/Users/xuhaoran/Desktop</span><br></pre></td></tr></table></figure>
+<p>查看当前路径下的所有Folder和File使用<code>ls</code>命令，值得一提的是使用<code>Tab</code>可以进行匹配输入，注意Terminal大小写敏感。通常情况<code>ls</code>命令是不显示隐藏文件的，可以使用<code>ls -A</code>来显示所有隐藏文件，即<code>.Name</code>形式的文件：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ls -A</span><br><span class="line"><span class="selector-class">.CFUserTextEncoding</span>	<span class="selector-class">.gitignore_global</span>	.vim</span><br><span class="line"><span class="selector-class">.DS_Store</span>		<span class="selector-class">.hgignore_global</span>	.viminfo</span><br></pre></td></tr></table></figure>
+<p><code>pwd</code>、<code>cd</code>、<code>ls</code>三条命令搭配使用可以完成绝大多数的路径查询跳转工作，至于这三个命令的其他参数可以使用<code>man</code>来自行查询。</p>
+<p>而创建与删除路径使用<code>mkdir</code>与<code>rmdir</code>两个命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir DirectoryName</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rmdir DirectoryName</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>mkdir</code>命令时，如果想创建多层目录的话可以添加参数<code>p</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p dir1/dir2/dir3</span></span><br></pre></td></tr></table></figure>
+<h3 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h3><p>通过Command Line检视文件，可以使用命令<code>cat</code>将文件内容输出到Terminal中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat Desktop/</span></span><br><span class="line">cat: Desktop/: Is a directory</span><br><span class="line"><span class="meta">$</span><span class="bash"> cat Hello.text</span></span><br><span class="line">Hello World!</span><br></pre></td></tr></table></figure>
+<p>面对较长的文本直接输出到Terminal中显然并不合理，那么可以使用<code>less</code>命令，在<code>less</code>命令进入文件后按<code>V</code>进入vim编辑器。</p>
+<p>如果想查看文件类型信息，特别是在文件扩展名丢失的情况下，可以使用<code>file</code>命令：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">file</span> unnamed</span><br><span class="line">unnamed: ASCII <span class="built_in">text</span></span><br></pre></td></tr></table></figure>
+<p>可以使用<code>touch</code>命令创建文件和指定文件扩展名：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> touch FileName.ExpandedName</span></span><br></pre></td></tr></table></figure>
+<p>创建之后可以直接进入编辑器进行编辑，可以使用<code>vim</code>命令进去vim编辑器或者<code>nano</code>命令进入nano编辑器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim FileName.ExpandedName</span></span><br></pre></td></tr></table></figure>
+<p>可以使用<code>open</code>命令打开一个文件或者使用Finder打开一个Folder，使用<code>open .</code>命令来打开当前的Folder：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> open .</span></span><br></pre></td></tr></table></figure>
+<p>对于基本的复制剪切操作可以分别使用<code>cp</code> 、<code>mv</code>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 将Test/ 复制/移动到 Workspace/</span><br><span class="line"><span class="meta">$</span><span class="bash"> cp Test/ Workspace/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv Test/ Workspace/</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于权限命令"><a href="#关于权限命令" class="headerlink" title="关于权限命令"></a>关于权限命令</h2><h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>查看当前目录下的文件权限可以使用<code>ls -alh</code>命令：</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ls -alh</span><br><span class="line">total 8152</span><br><span class="line">/*</span><br><span class="line">    权限        拥有者	 群组</span><br><span class="line">*/</span><br><span class="line">-rw-r--r--@ <span class="number"> 1 </span>xuhaoran  staff   104K<span class="number"> 11 </span>22 14:07 430DDC5092226B6C4F062BAEF2242B78.jpg</span><br><span class="line">drwxr-xr-x <span class="number"> 10 </span>xuhaoran  staff   320B<span class="number"> 11 </span><span class="number"> 2 </span>14:05 AlamofireDemo</span><br><span class="line">-rw-r--r--@ <span class="number"> 1 </span>xuhaoran  staff   956B<span class="number"> 10 </span>13 <span class="number"> 2016 </span>CertificateSigningRequest.certSigningRequest</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>其中权限部分详细的分为<code>d rwx rwx rwx</code>四部分。</p>
+<p>第一部分中<code>d</code>表示为Directory，而<code>-</code>则表示File。</p>
+<p>后面三部分分别表示“对所有者”、“对同组人”、“对其他人”的权限，<code>r</code>读取权限、<code>w</code>写入权限、<code>x</code>执行权限，<code>-</code>表示无权限。</p>
+<p>以其中<code>AlamofireDemo</code>为例，表示为目录、所有者可读可写可执行、同组人可读可执行、其他人可读可执行。</p>
+<p>而三部分的权限可使用数字表示，其中<code>r</code>权限为2²，<code>w</code>权限为2¹，<code>x</code>权限为2º，例如：<code>AlamofireDemo</code>目录的全校可以表示为<code>755</code>，而<code>cerSigningRequest</code>文件的权限为<code>644</code>。</p>
+<p>权限是可以变更的，使用<code>chmod</code>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chmod -R 755 AlamofireDemo</span></span><br></pre></td></tr></table></figure>
+<p>这是通常情况下的标准命令，为文件添加<code>rwxr-xr-x</code>权限，<code>-R</code>参数表示改变目录结构下所有子目录文件的权限而并非目录本身。<code>chmod 777 FileName</code>则是非常危险的命令，赋予了其他人与root相同的权限。</p>
+<p><code>chmod</code>还有一种改变权限的形式，使用运算符<code>+</code>(增加)、<code>-</code>(去除)、<code>=</code>(覆盖设定)配合用户类型<code>u</code>(所有者)、<code>g</code>(同组人)、<code>o</code>(其他人)、<code>a</code>(全部)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chmod -R g+x AlamofireDemo/</span></span><br></pre></td></tr></table></figure>
+<p>上面这条命令是为<code>AlamofireDemo</code>这个目录的同组人添加执行权限。</p>
+<p>同样，拥有者和群组也是可以改变的，使用<code>chown</code>命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chown UserName:GroupName FileName</span></span><br></pre></td></tr></table></figure>
+<h3 id="root权限"><a href="#root权限" class="headerlink" title="root权限"></a>root权限</h3><p><code>sudo</code>命令的作用在于会用root账户权限来执行后面的命令，通常在执行一条命令提示<code>Permission denied</code>时使用。使用<code>sudo !!</code>再次执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat secret.doc</span></span><br><span class="line">Permission denied</span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo !!</span></span><br><span class="line">Password: *</span><br></pre></td></tr></table></figure>
+<p>如果执行多条需要root权限的命令，可以使用<code>sudo -s</code>获取root权限，注意<code>#</code>代替了<code>$</code>表示使用root权限操作，操作结束可以使用<code>Control</code>+<code>D</code>或者输入<code>exit</code>命令来退出环境：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xuhaoran$ sudo -s</span><br><span class="line"><span class="symbol">Password:</span></span><br><span class="line">bash<span class="number">-3.2</span><span class="meta"># exit</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于网络通信的命令"><a href="#关于网络通信的命令" class="headerlink" title="关于网络通信的命令"></a>关于网络通信的命令</h2><h3 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h3><p>在网络通信之前，最常用的操作就是<code>ping</code>命令，它会给网络主机发送一个回应请求，进而验证可否进行通信：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$<span class="built_in"> ping </span>panghu.cf</span><br><span class="line">PING panghu.cf (128.14.32.165): 56 data bytes</span><br><span class="line">64 bytes <span class="keyword">from</span> 128.14.32.165: <span class="attribute">icmp_seq</span>=0 <span class="attribute">ttl</span>=50 <span class="attribute">time</span>=168.334 ms</span><br><span class="line">64 bytes <span class="keyword">from</span> 128.14.32.165: <span class="attribute">icmp_seq</span>=1 <span class="attribute">ttl</span>=50 <span class="attribute">time</span>=158.529 ms</span><br></pre></td></tr></table></figure>
+<p>可使用<code>Control</code>+<code>C</code>停止发送请求。</p>
+<h3 id="ssh命令"><a href="#ssh命令" class="headerlink" title="ssh命令"></a>ssh命令</h3><p><code>ssh</code>是一种远程登录和其他安全服务的协议，远程登录相比较于<code>telnet</code>和<code>rlogin</code>两种协议，有其特有的优势，例如加密传输、数据压缩等。</p>
+<p>Mac的Terminal自带SSH，使用<code>ssh</code>就可以登录远程服务器：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh root<span class="variable">@panghu</span>.cf</span><br><span class="line">root<span class="variable">@panghu</span>.cf<span class="string">'s password: *</span></span><br></pre></td></tr></table></figure>
+<p>之后就可以在远程服务器进行一些常规操作或者一些逗逼的命令：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -<span class="keyword">N</span> --<span class="keyword">no</span>-check-certificate http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/ToyoDAdoubi/doubi/master/ssr.<span class="keyword">sh</span> &amp;&amp; chmod +<span class="keyword">x</span> ssr.<span class="keyword">sh</span> &amp;&amp; bash ssr.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<p>网络通信命令还有很多，这里限于能力就不献丑了。</p>
+<h2 id="关于其他系统命令"><a href="#关于其他系统命令" class="headerlink" title="关于其他系统命令"></a>关于其他系统命令</h2><p><code>bash</code>命令是用来执行一段脚本命令的命令，通常可以用来执行本地写好的脚本，例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> bash ssr.sh</span></span><br></pre></td></tr></table></figure>
+<p><code>who</code>命令可以列出当前登录的所有用户，<code>who am i</code>显而易见是回答“我是谁？”的问题：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ who</span><br><span class="line">xuhaoran<span class="built_in"> console </span> Nov 20 17:06 </span><br><span class="line">xuhaoran ttys001  Nov 22 13:52 </span><br><span class="line">xuhaoran ttys002  Nov 23 14:52 </span><br><span class="line">$ who am i</span><br><span class="line">xuhaoran ttys002  Nov 23 14:52</span><br></pre></td></tr></table></figure>
+<p><code>console</code>是电脑的底层控制台，伴随着电脑开机而启动；<code>ttys</code>（Teletypewriter的缩写）则是Terminal的类型名称，随着Terminal数量增加而增加计数。使用<code>Command</code>+<code>N</code>来新建Terminal。</p>
+<p>至于<code>Console</code>、<code>Terminal</code>、<code>tty</code>和<code>Shell</code>的关系这里就不叙述了。</p>
+<p>使用<code>ps</code>命令来查看进程状态，可以确定哪些进程僵死或过多占用资源等。通常使用<code>ps aux</code>来查看具体进程：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux</span><br><span class="line">USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND</span><br><span class="line">xuhaoran           355   3.0  3.0  7056284 249392   ??  S    一05下午  57:40.33 /Applications/WeChat.app/Contents/MacOS/WeChat -psn_0_57358</span><br><span class="line">root                96   0.3  0.1  4346796   8364   ??  Ss   一05下午   3:00.86 /usr/libexec/opendirectoryd</span><br><span class="line"><span class="built_in">..</span>.</span><br></pre></td></tr></table></figure>
+<p><code>PID</code>表示进程的id，<code>%CPU</code>、<code>%MEM</code>分别表示进程占用CPU和内存的比重，<code>VSZ</code>表示使用掉的虚拟内存(KB)，<code>RSS</code>表示占用的固定内存(KB)，<code>TT</code>表示在哪个Terminal上执行，<code>STAT</code>表示该进程目前的状态。</p>
+<p>关于<code>STAT</code>的状态码：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">状态码</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>R</code></td>
+<td style="text-align:center">正在运行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S</code></td>
+<td style="text-align:center">休眠</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>T</code></td>
+<td style="text-align:center">停止</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Z</code></td>
+<td style="text-align:center">僵死</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;</code></td>
+<td style="text-align:center">高优先级</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:center">低优先级</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>L</code></td>
+<td style="text-align:center">锁定</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:center">存在子进程</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>+</code></td>
+<td style="text-align:center">后台进程组</td>
+</tr>
+</tbody>
+</table>
+<p>查询到进程之后可以使用<code>kill</code>命令用来终止进程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">kill</span> -SignalNumber PID</span></span><br></pre></td></tr></table></figure>
+<p>至于<code>SignalNumber</code>可以通过命令<code>kill l</code>获取：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ kill -l</span><br><span class="line"> <span class="number">1</span>) SIGHUP       <span class="number">2</span>) SIGINT       <span class="number">3</span>) SIGQUIT      <span class="number">4</span>) SIGILL</span><br><span class="line"> <span class="number">5</span>) SIGTRAP      <span class="number">6</span>) SIGABRT      <span class="number">7</span>) SIGEMT       <span class="number">8</span>) SIGFPE</span><br><span class="line"> <span class="number">9</span>) SIGKILL     <span class="number">10</span>) SIGBUS      <span class="number">11</span>) SIGSEGV     <span class="number">12</span>) SIGSYS</span><br><span class="line"><span class="number">13</span>) SIGPIPE     <span class="number">14</span>) SIGALRM     <span class="number">15</span>) SIGTERM     <span class="number">16</span>) SIGURG</span><br><span class="line"><span class="number">17</span>) SIGSTOP     <span class="number">18</span>) SIGTSTP     <span class="number">19</span>) SIGCONT     <span class="number">20</span>) SIGCHLD</span><br><span class="line"><span class="number">21</span>) SIGTTIN     <span class="number">22</span>) SIGTTOU     <span class="number">23</span>) SIGIO       <span class="number">24</span>) SIGXCPU</span><br><span class="line"><span class="number">25</span>) SIGXFSZ     <span class="number">26</span>) SIGVTALRM   <span class="number">27</span>) SIGPROF     <span class="number">28</span>) SIGWINCH</span><br><span class="line"><span class="number">29</span>) SIGINFO     <span class="number">30</span>) SIGUSR1     <span class="number">31</span>) SIGUSR2</span><br></pre></td></tr></table></figure>
+<p>其中常用的为9(SIGKILL)，对付大多数程序可以<code>kill -9 PID</code>直接干掉。</p>
+<p>其他常用的系统命令有查看时间的命令<code>date</code>：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ date</span><br><span class="line"><span class="number">2017</span>年<span class="number">11</span>月<span class="number">23</span>日 星期四 <span class="number">16</span>时<span class="number">47</span>分<span class="number">40</span>秒 CST</span><br></pre></td></tr></table></figure>
+<p>查看日历的命令<code>cal</code>：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cal</span><br><span class="line">      十一月 <span class="number">2017</span>        </span><br><span class="line">日 一 二 三 四 五 六  </span><br><span class="line">          <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  </span><br><span class="line"> <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>  </span><br><span class="line"><span class="number">12</span> <span class="number">13</span> <span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span> <span class="number">18</span>  </span><br><span class="line"><span class="number">19</span> <span class="number">20</span> <span class="number">21</span> <span class="number">22</span> <span class="number">23</span> <span class="number">24</span> <span class="number">25</span>  </span><br><span class="line"><span class="number">26</span> <span class="number">27</span> <span class="number">28</span> <span class="number">29</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<p><code>cal</code>命令后面可接年份，例如<code>cal 2017</code>，也可以接月份+年份，例如<code>cal 8 2018</code>表示展现2018年8月的日历。</p>
+<h2 id="一些小技巧"><a href="#一些小技巧" class="headerlink" title="一些小技巧"></a>一些小技巧</h2><h3 id="alias与unalias命令"><a href="#alias与unalias命令" class="headerlink" title="alias与unalias命令"></a>alias与unalias命令</h3><p>对于常用的命令可以使用<code>alias</code>为其添加别名，例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">alias</span> del=<span class="string">"rm -rf"</span></span></span><br></pre></td></tr></table></figure>
+<p>删除别名可以使用<code>unalias</code>:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">unalias</span> del</span></span><br></pre></td></tr></table></figure>
+<h3 id="退出及清屏命令"><a href="#退出及清屏命令" class="headerlink" title="退出及清屏命令"></a>退出及清屏命令</h3><p>使用<code>control</code>+<code>C</code> 可以终止持续进行的命令，例如<code>ping</code>命令。</p>
+<p>使用<code>control</code>+<code>D</code>或者<code>exit</code>命令可以结束当前状态，例如结束<code>ssh</code>的远程链接。</p>
+<p>使用<code>control</code>+<code>L</code>或者<code>clear</code>命令可以清屏，与<code>reset</code>命令不同的是，<code>clear</code>可以滚动查看之前的内容，而<code>reset</code>则是完全清除内容。</p>
+<h3 id="光标操作"><a href="#光标操作" class="headerlink" title="光标操作"></a>光标操作</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:right">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>control</code>+<code>A</code></td>
+<td style="text-align:right">移动光标至行首</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>control</code>+<code>E</code></td>
+<td style="text-align:right">移动光标至行尾</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>control</code>+<code>U</code></td>
+<td style="text-align:right">删除整行命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>control</code>+<code>K</code></td>
+<td style="text-align:right">删除光标后面的内容</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>option</code>+<code>←</code>、<code>→</code></td>
+<td style="text-align:right">按词组移动光标</td>
+</tr>
+</tbody>
+</table>
+<h3 id="快速操作"><a href="#快速操作" class="headerlink" title="快速操作"></a>快速操作</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:right">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>!!</code></td>
+<td style="text-align:right">执行上一条命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>!</code></td>
+<td style="text-align:right">重复命令，例如<code>$ ! -3</code>执行前三条命令、<code>$ !pod</code>重复最近一次的<code>pod</code>命令等</td>
+</tr>
+<tr>
+<td style="text-align:center">`</td>
+<td style="text-align:right">`</td>
+<td>将左侧命令结果扔给右侧命令，例如`$ ps aux</td>
+<td>pbcopy`将进程信息保存的剪贴板</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;</code></td>
+<td style="text-align:right">将左侧命令结果保存进右侧文件，例如<code>$ pbpaste &gt; out.txt</code>将剪贴板内容保存到文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&amp;&amp;</code></td>
+<td style="text-align:right">等待前一条命令执行成功之后执行后面命令，例如<code>$ chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&amp;</code></td>
+<td style="text-align:right">多条命令同时执行，例如<code>$ chmod +x ssr.sh &amp; chmod +x other.sh</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>;</code></td>
+<td style="text-align:right">不管前面命令成功与否都继续执行后面命令，例如<code>$ chmod +x ssr.sh ; cp ssr.sh ~/Desktop/</code></td>
+</tr>
+</tbody>
+</table>
+<p>使用<code>history</code>命令可以查询执行命令的历史记录<code>history PageCnt</code>：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ history <span class="number">10</span></span><br><span class="line">  <span class="number">543</span>  kill l</span><br><span class="line">  <span class="number">544</span>  kill -l</span><br><span class="line">  <span class="number">545</span>  date</span><br><span class="line">  <span class="number">546</span>  cal</span><br><span class="line">  <span class="number">547</span>  ssh root@panghu.cf</span><br><span class="line">  <span class="number">548</span>  ls</span><br><span class="line">  <span class="number">549</span>  ping panghu.cf</span><br><span class="line">  <span class="number">550</span>  ftp panghu.cf</span><br><span class="line">  <span class="number">551</span>  yum</span><br><span class="line">  <span class="number">552</span>  ls</span><br></pre></td></tr></table></figure>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>连续写了两天时间，期间不断的去查询和完善内容，感觉这个过程又收获了很多知识。</p>
+<p>Terminal的强大只有真正融入进去才能感受得到，以上这些都只是本人在工作中遇到的最基本的内容，说成冰山一角毫不为过，所以日后遇到新的内容还会继续进行补充更新。</p>
+<p>最后，很多命令下的参数都有不同的用法，当遇到问题了请熟练地使用<code>man</code>命令，希望对您有所帮助。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我喝一杯咖啡？</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/assets/blogImg/wechatpay.jpg" alt="许昊然 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Terminal-Command-Line/" rel="tag"># Terminal Command Line</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/27/基于Hexo的博客搭建/" rel="prev" title="基于Hexo的博客搭建 for Mac">
+                基于Hexo的博客搭建 for Mac <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/assets/blogImg/avatar.jpg"
+                alt="许昊然" />
+            
+              <p class="site-author-name" itemprop="name">许昊然</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xuhaoranLeo" target="_blank" title="GitHub">
+                    GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:liang_andy@163.com" target="_blank" title="E-Mail">
+                    E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.jianshu.com/u/8f0c4d84e87c" target="_blank" title="简书">
+                    简书</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/5711479827" target="_blank" title="微博">
+                    微博</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Command-Line"><span class="nav-number">1.</span> <span class="nav-text">关于Command Line</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于man命令"><span class="nav-number">2.</span> <span class="nav-text">关于man命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于路径与文件命令"><span class="nav-number">3.</span> <span class="nav-text">关于路径与文件命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路径命令"><span class="nav-number">3.1.</span> <span class="nav-text">路径命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件命令"><span class="nav-number">3.2.</span> <span class="nav-text">文件命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于权限命令"><span class="nav-number">4.</span> <span class="nav-text">关于权限命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#权限"><span class="nav-number">4.1.</span> <span class="nav-text">权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#root权限"><span class="nav-number">4.2.</span> <span class="nav-text">root权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于网络通信的命令"><span class="nav-number">5.</span> <span class="nav-text">关于网络通信的命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ping命令"><span class="nav-number">5.1.</span> <span class="nav-text">ping命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh命令"><span class="nav-number">5.2.</span> <span class="nav-text">ssh命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于其他系统命令"><span class="nav-number">6.</span> <span class="nav-text">关于其他系统命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些小技巧"><span class="nav-number">7.</span> <span class="nav-text">一些小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#alias与unalias命令"><span class="nav-number">7.1.</span> <span class="nav-text">alias与unalias命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出及清屏命令"><span class="nav-number">7.2.</span> <span class="nav-text">退出及清屏命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光标操作"><span class="nav-number">7.3.</span> <span class="nav-text">光标操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速操作"><span class="nav-number">7.4.</span> <span class="nav-text">快速操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">8.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leo</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
